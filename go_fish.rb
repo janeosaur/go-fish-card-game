@@ -1,5 +1,27 @@
 class PlayingCard
   # initialize
+
+  # attr_accessor :suit
+  attr_reader :rank, :suit, :face
+
+  def initialize (args)
+    @rank = args[:rank]
+    @suit = args[:suit]
+  end
+
+  def suit
+    @suit.to_s
+    # self.suit.to_s - this doesn't work
+  end
+
+  def face
+    "#{@rank}#{@suit}"
+  end
+
+  def to_s
+    face
+  end
+
 end
 
 class CardDeck
