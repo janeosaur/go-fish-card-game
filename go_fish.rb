@@ -24,12 +24,30 @@ class PlayingCard
 
 end
 
+
+
 class CardDeck
   # initialize
+  attr_accessor :is_shuffled, :cards
+
+  def initialize(is_shuffled = true)
+    @is_shuffled = is_shuffled
+    # if is_shuffled
+    #   @cards.shuffle!
+
+  end
+
 end
+
+
 
 class HandOfCards
   # initialize
+  attr_accessor :array
+  def initialize (array = [])
+    @array
+  end
+
 end
 
 class CardPlayer
